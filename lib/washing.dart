@@ -183,7 +183,7 @@ class _WashingState extends State<Washing> {
             //  padding: EdgeInsets.only(left: 10.0),
             itemCount: length,
             itemBuilder: (BuildContext context, int index) {
-              x += int.parse(obj[index].price);
+              //  x += int.parse(obj[index].price);
               return Container(
                 margin: EdgeInsets.all(5),
                 child: Card(
