@@ -46,9 +46,9 @@ class _ServicesDetailState extends State<ServicesDetail> {
             ),
           ),
           Services(
-            servicesName: 'Washcloth',
-            thumbnail: AssetImage('images/house.png'),
-            servicesName1: 'washCloth',
+            servicesName: 'Wash',
+            thumbnail: AssetImage('images/WASH1.png'),
+            servicesName1: 'House Keeping',
             thumbnail1: AssetImage('images/house.png'),
             onpressed: () {
               Navigator.of(context).push(MaterialPageRoute(
@@ -60,10 +60,10 @@ class _ServicesDetailState extends State<ServicesDetail> {
             },
           ),
           Services(
-            servicesName: 'Washcloth',
-            thumbnail: AssetImage('images/house.png'),
-            servicesName1: 'washCloth',
-            thumbnail1: AssetImage('images/house.png'),
+            servicesName: 'Office janitor',
+            thumbnail: AssetImage('images/icons8-housekeeping-100.png'),
+            servicesName1: 'Premium Wash',
+            thumbnail1: AssetImage('images/icons8-washing-machine-96.png'),
           ),
         ],
       ),
@@ -109,11 +109,12 @@ class Services extends StatelessWidget {
                   children: <Widget>[
                     Center(
                       child: Image(
+                        height: 90,
                         image: thumbnail,
                       ),
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 35,
                     ),
                     Text(
                       servicesName,
@@ -129,33 +130,39 @@ class Services extends StatelessWidget {
           ),
         ),
         Expanded(
-          child: Container(
-            margin: EdgeInsets.all(15.0),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            height: 160,
-            child: Card(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Center(
-                    child: Image(
-                      image: thumbnail1,
+          child: GestureDetector(
+            onTap: () {
+              onpressed1();
+            },
+            child: Container(
+              margin: EdgeInsets.all(15.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              height: 160,
+              child: Card(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Center(
+                      child: Image(
+                        height: 100,
+                        image: thumbnail1,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    servicesName1,
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                    SizedBox(
+                      height: 15,
                     ),
-                  )
-                ],
+                    Text(
+                      servicesName1,
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),

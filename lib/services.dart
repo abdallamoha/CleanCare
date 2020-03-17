@@ -27,10 +27,11 @@ class _ServiceTypeState extends State<ServiceType> {
         currentIndex: _currentIndex,
         onTap: _onBottomNavBarTab,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('uy')),
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('HOME')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.local_laundry_service), title: Text('uy')),
-          BottomNavigationBarItem(icon: Icon(Icons.person), title: Text('uy'))
+              icon: Icon(Icons.local_laundry_service), title: Text('SERVICE')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person), title: Text('PROFILE'))
         ],
       ),
       body: _children[_currentIndex],

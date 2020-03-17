@@ -67,6 +67,8 @@ class MyMapSampleState extends State<MyMap> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: new Scaffold(
+        // resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomPadding: false,
         key: scaffoldKey,
         drawer: Drawer(
           child: ListView(
@@ -107,6 +109,8 @@ class MyMapSampleState extends State<MyMap> {
                 leading: Icon(Icons.exit_to_app),
                 title: Text('Logout'),
                 onTap: () {
+                  //FocusScope.of(context).requestFocus(new FocusNode());
+
                   Navigator.of(context).pop();
 //                  Navigator.of(context).push(MaterialPageRoute(
 //                      builder: (BuildContext context) => MyApp()));

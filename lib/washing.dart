@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:cleancare/review_oder.dart';
+import 'package:cleancare/models/topPart.dart';
+import 'package:cleancare/models/categories.dart';
 
 class Washing extends StatefulWidget {
   @override
@@ -11,25 +13,28 @@ class Washing extends StatefulWidget {
 class _WashingState extends State<Washing> {
   int selectedIndex = 0;
 
+  var toppart = ListMenu();
+  var x = 0;
+
   @override
   Widget build(BuildContext context) {
     Widget content;
+
     if (selectedIndex == 0) {
-      content = buildColumn(2);
+      content =
+          buildColumn(myobjCategoriesTOP.length, toppart, myobjCategoriesTOP);
     } else if (selectedIndex == 1) {
-      content = buildColumn(3);
+      content = buildColumn(
+          myobjCategoriesBOTTOM.length, toppart, myobjCategoriesBOTTOM);
     } else if (selectedIndex == 2) {
-      content = buildColumn(4);
+      content = buildColumn(
+          myobjCategoriesDRESS.length, toppart, myobjCategoriesDRESS);
     } else if (selectedIndex == 3) {
-      content = buildColumn(5);
+      content = buildColumn(
+          myobjCategoriesBlazer.length, toppart, myobjCategoriesBlazer);
     } else if (selectedIndex == 4) {
-      content = buildColumn(6);
-    } else if (selectedIndex == 5) {
-      content = buildColumn(7);
-    } else if (selectedIndex == 6) {
-      content = buildColumn(8);
-    } else if (selectedIndex == 7) {
-      content = buildColumn(9);
+      content = buildColumn(
+          myobjCategoriesSHOES.length, toppart, myobjCategoriesSHOES);
     }
     return Scaffold(
       //backgroundColor: Color(),
@@ -86,7 +91,7 @@ class _WashingState extends State<Washing> {
     );
   }
 
-  Column buildColumn(number) {
+  Column buildColumn(number, topmenu, obj) {
     var length = number;
     return Column(
       children: <Widget>[
@@ -125,7 +130,7 @@ class _WashingState extends State<Washing> {
                 child: ListView.builder(
                   padding: EdgeInsets.only(left: 10.0),
                   scrollDirection: Axis.horizontal,
-                  itemCount: 7,
+                  itemCount: menuObj.length,
                   itemBuilder: (BuildContext context, int index) {
                     return GestureDetector(
 //                    onTap: () => Navigator.push(
@@ -151,11 +156,11 @@ class _WashingState extends State<Washing> {
                                   ? Color(0xff5F82C1)
                                   : Color(0xffE1EAF9),
                               radius: 35.0,
-                              backgroundImage: AssetImage('images/house.png'),
+                              backgroundImage: menuObj[index].imageThumbnail,
                             ),
                             SizedBox(height: 6.0),
                             Text(
-                              'Bottom',
+                              menuObj[index].label,
                               // favorites[index].name,
                               style: TextStyle(
                                 color: Colors.blueGrey,
@@ -178,6 +183,7 @@ class _WashingState extends State<Washing> {
             //  padding: EdgeInsets.only(left: 10.0),
             itemCount: length,
             itemBuilder: (BuildContext context, int index) {
+              x += int.parse(obj[index].price);
               return Container(
                 margin: EdgeInsets.all(5),
                 child: Card(
@@ -191,7 +197,7 @@ class _WashingState extends State<Washing> {
                             //height: 84,
                             color: Colors.white,
                             child: Image(
-                              image: AssetImage('images/house.png'),
+                              image: obj[index].IMAGE,
                             )),
                       ),
                       Expanded(
@@ -200,7 +206,7 @@ class _WashingState extends State<Washing> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              'T-shirt',
+                              obj[index].label,
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
@@ -208,7 +214,7 @@ class _WashingState extends State<Washing> {
                               ),
                             ),
                             Text(
-                              'KSH 5',
+                              'KSH $x',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
@@ -241,7 +247,16 @@ class _WashingState extends State<Washing> {
                                   child: IconButton(
                                     iconSize: 20,
                                     icon: Icon(Icons.remove),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      if (x == obj[index].price) {
+                                        return;
+                                      } else {
+                                        setState(() {
+                                          x -= int.parse(obj[index].price);
+                                        });
+                                        print(x);
+                                      }
+                                    },
                                   ),
                                 ),
                               ),
@@ -257,7 +272,12 @@ class _WashingState extends State<Washing> {
                                   child: IconButton(
                                     iconSize: 20,
                                     icon: Icon(Icons.add),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      setState(() {
+                                        x += int.parse(obj[index].price);
+                                      });
+                                      print(x);
+                                    },
                                   ),
                                 ),
                               ),
