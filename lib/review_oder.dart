@@ -50,7 +50,7 @@ class _ReviewOrderState extends State<ReviewOrder> {
             // flex: 2,
             child: Container(
               alignment: Alignment.centerLeft,
-              margin: EdgeInsets.only(left: 20, top: 10),
+              margin: EdgeInsets.only(left: 21, top: 10),
               child: Text(
                 'Review Order',
                 style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
