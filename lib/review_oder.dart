@@ -23,7 +23,7 @@ class _ReviewOrderState extends State<ReviewOrder> {
           icon: Icon(
             Icons.arrow_back,
             color: Colors.blue,
-            size: 34,
+            size: 3,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -39,7 +39,7 @@ class _ReviewOrderState extends State<ReviewOrder> {
               child: Icon(
                 Icons.edit,
                 color: Colors.blue,
-                size: 34,
+                size: 33,
               )),
         ],
       ),
