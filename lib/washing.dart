@@ -57,7 +57,7 @@ class _WashingState extends State<Washing> {
               ),
               Container(
                   alignment: Alignment.topRight,
-                  width: 25,
+                  width: 22,
                   height: 24,
                   margin: EdgeInsets.only(top: 5, left: 30),
                   decoration: BoxDecoration(
