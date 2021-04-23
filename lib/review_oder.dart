@@ -58,7 +58,7 @@ class _ReviewOrderState extends State<ReviewOrder> {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 11,
           ),
           Expanded(
             flex: 5,
