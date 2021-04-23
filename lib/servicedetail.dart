@@ -85,7 +85,7 @@ class Services extends StatelessWidget {
       this.servicesName1,
       this.thumbnail1,
       this.onpressed1});
-
+//
   @override
   Widget build(BuildContext context) {
     return Row(
