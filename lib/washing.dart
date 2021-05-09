@@ -52,7 +52,7 @@ class _WashingState extends State<Washing> {
                 icon: Icon(
                   Icons.shopping_basket,
                   color: Colors.white,
-                  size: 34.0,
+                  size: 33.0,
                 ),
               ),
               Container(
