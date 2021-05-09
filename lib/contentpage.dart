@@ -19,7 +19,7 @@ class ContentPage extends StatelessWidget {
               child: Container(
                 child: CircleAvatar(
                   backgroundColor: Colors.blue,
-                  radius: 34,
+                  radius: 30,
                   backgroundImage: AssetImage('images/m.jpg'),
                 ),
               ),
