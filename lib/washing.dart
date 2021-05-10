@@ -62,7 +62,7 @@ class _WashingState extends State<Washing> {
                   margin: EdgeInsets.only(top: 5, left: 30),
                   decoration: BoxDecoration(
                       color: Colors.red,
-                      borderRadius: BorderRadius.circular(15)),
+                      borderRadius: BorderRadius.circular(16)),
                   //padding: EdgeInsets.only(left: 30, top: 2),
                   child: Center(
                     child: Text(
