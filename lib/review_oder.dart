@@ -53,7 +53,7 @@ class _ReviewOrderState extends State<ReviewOrder> {
               margin: EdgeInsets.only(left: 21, top: 10),
               child: Text(
                 'Review Order',
-                style: TextStyle(fontSize: 34, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 33, fontWeight: FontWeight.bold),
               ),
             ),
           ),
