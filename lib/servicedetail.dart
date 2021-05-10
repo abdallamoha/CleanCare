@@ -32,7 +32,7 @@ class _ServicesDetailState extends State<ServicesDetail> {
                   "you location",
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
-                    fontSize: 16,
+                    fontSize: 15,
                   ),
                 ),
                 Text(
