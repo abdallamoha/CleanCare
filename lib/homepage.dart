@@ -226,7 +226,7 @@ class MyMapSampleState extends State<MyMap> {
                       onPressed: _getLocation,
                       materialTapTargetSize: MaterialTapTargetSize.padded,
                       backgroundColor: Colors.blue[300],
-                      child: const Icon(Icons.my_location, size: 26.0),
+                      child: const Icon(Icons.my_location, size: 25.0),
                       heroTag: 'btn2',
                     ),
                   ],
