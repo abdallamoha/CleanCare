@@ -270,7 +270,7 @@ class _ReviewOrderState extends State<ReviewOrder> {
                           child: Text(
                             'REQUEST CLEAN CARE',
                             style: TextStyle(
-                              fontSize: 18,
+                              fontSize: 19,
                               color: Colors.white,
                             ),
                           ),
