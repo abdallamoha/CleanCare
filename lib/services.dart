@@ -31,7 +31,7 @@ class _ServiceTypeState extends State<ServiceType> {
           BottomNavigationBarItem(
               icon: Icon(Icons.local_laundry_service), title: Text('SERVICE')),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person), title: Text('PROFILE.'))
+              icon: Icon(Icons.person), title: Text('PROFILE'))
         ],
       ),
       body: _children[_currentIndex],
