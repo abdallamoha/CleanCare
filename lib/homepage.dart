@@ -29,7 +29,7 @@ class MyMapSampleState extends State<MyMap> {
 
   static const LatLng _center = const LatLng(-1.286389, 36.817223);
   LatLng _latLng;
-
+//
   final Set<Marker> _markers = {};
 
   LatLng _lastMapPosition = _center;
