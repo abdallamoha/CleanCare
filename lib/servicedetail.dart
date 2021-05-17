@@ -157,7 +157,7 @@ class Services extends StatelessWidget {
                     Text(
                       servicesName1,
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     )
