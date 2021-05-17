@@ -41,7 +41,7 @@ class _WashingState extends State<Washing> {
       appBar: AppBar(
         elevation: 0.0,
         title: Text(
-          'Washing',
+          'Washing.',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         actions: <Widget>[
