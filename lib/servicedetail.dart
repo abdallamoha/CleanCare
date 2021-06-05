@@ -14,7 +14,7 @@ class _ServicesDetailState extends State<ServicesDetail> {
         title: Text(
           'Services type',
           style: TextStyle(
-            fontSize: 19,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
