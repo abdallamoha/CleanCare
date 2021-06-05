@@ -39,7 +39,7 @@ class _ReviewOrderState extends State<ReviewOrder> {
               child: Icon(
                 Icons.edit,
                 color: Colors.blue,
-                size: 33,
+                size: 32,
               )),
         ],
       ),
