@@ -187,7 +187,7 @@ class MyMapSampleState extends State<MyMap> {
                 child: Row(
                   children: <Widget>[
                     RawMaterialButton(
-                      elevation: 4.0,
+                      elevation: 3.0,
                       onPressed: () {
                         setState(() {
                           Navigator.of(context).push(MaterialPageRoute(
